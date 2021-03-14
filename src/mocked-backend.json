@@ -1,0 +1,75 @@
+{
+  "/salons": {
+    "get": [
+      {
+        "name": "Sax & Fön",
+        "price": 320,
+        "rating": 32,
+        "address": "Rådmansgatan 46",
+        "distance": 30,
+        "someData": "12.00"
+      },
+      {
+        "name": "Hårizont",
+        "price": 320,
+        "rating": 32,
+        "address": "Rådmansgatan 46",
+        "distance": 30,
+        "someData": "12.00"
+      },
+      {
+        "name": "Hårhuset",
+        "price": 320,
+        "rating": 32,
+        "address": "Rådmansgatan 46",
+        "distance": 30,
+        "someData": "12.00"
+      },
+      {
+        "name": "Hair & Nu",
+        "price": 320,
+        "rating": 32,
+        "address": "Rådmansgatan 46",
+        "distance": 30,
+        "someData": "12.00"
+      },
+      {
+        "name": "Hårley Davidson",
+        "price": 320,
+        "rating": 32,
+        "address": "Rådmansgatan 46",
+        "distance": 30,
+        "someData": "12.00"
+      },
+      {
+        "name": "Hair & Nu",
+        "price": 320,
+        "rating": 32,
+        "address": "Rådmansgatan 46",
+        "distance": 30,
+        "someData": "12.00"
+      },
+      {
+        "name": "Hårley Davidson",
+        "price": 320,
+        "rating": 32,
+        "address": "Rådmansgatan 46",
+        "distance": 30,
+        "someData": "12.00"
+      }
+    ]
+  },
+  "/salon/:id": {
+    "get": {
+      "data": {
+        "id": 1,
+        "name": "Sax & Fön",
+        "price": 320,
+        "rating": 32,
+        "address": "Rådmansgatan 46",
+        "distance": 30,
+        "someData": "12.00"
+      }
+    }
+  }
+}

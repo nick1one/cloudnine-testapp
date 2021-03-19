@@ -10,6 +10,7 @@ const SquaredButton = styled.button`
   outline: none;
   height: ${buttonSize}px;
   width: ${buttonSize}px;
+  user-select: none;
 `;
 
 export default SquaredButton;

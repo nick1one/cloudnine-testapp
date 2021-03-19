@@ -1,7 +1,11 @@
 import React from "react";
-import { PRICE_FILTER_CONFIG } from "../../../constants";
-import { useDispatch, useStore } from "../../../store";
-import { ActionNames, AppState, PriceIntervalSelected } from "../../../types";
+import { PRICE_FILTER_CONFIG } from "../../../../constants";
+import { useDispatch, useStore } from "../../../../store";
+import {
+  ActionNames,
+  AppState,
+  PriceIntervalSelected,
+} from "../../../../types";
 import { PriceDropdown } from "./PriceFilterDropdown";
 
 export const PriceDropdownContainer = () => {

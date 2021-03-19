@@ -8,6 +8,7 @@ export type PriceIntervalSelected = DropdownConfig | null;
 export interface AppState {
   selectedInterval: PriceIntervalSelected;
   salonList: SalonItemData[];
+  activeTab: number;
 }
 
 export interface ActionType {
@@ -17,9 +18,7 @@ export interface ActionType {
 
 export enum ActionNames {
   CHANGE_PRICE_FILTER = "CHANGE_PRICE_FILTER",
-  FETCH_SALONS_INIT = "FETCH_SALONS_INIT",
-  FETCH_SALONS_SUCCESS = "FETCH_SALONS_SUCCESS",
-  FETCH_SALONS_FAILURE = "FETCH_SALONS_FAILURE",
+  SET_ACTIVE_TAB = "SET_ACTIVE_TAB",
 }
 
 export interface SalonItemData {
@@ -29,4 +28,9 @@ export interface SalonItemData {
   address: string;
   distance: number;
   someData: string;
+}
+
+export enum RatingVariant {
+  small = "small",
+  large = "large",
 }

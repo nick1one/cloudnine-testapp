@@ -1,9 +1,9 @@
 import { nanoid } from "nanoid";
 import React from "react";
 import styled from "styled-components";
-import { SalonItemData } from "../../../types";
+import { Rating } from "../../../components/Rating";
+import { RatingVariant, SalonItemData } from "../../../types";
 import { OpenSalonLink } from "./OpenSalonLink";
-import { Rating } from "./Rating";
 
 const StyledLi = styled.li`
   display: flex;
@@ -68,7 +68,7 @@ export const SalonListItem = ({ name, address, price }: SalonItemData) => (
     <FirstColumn>12.00</FirstColumn>
     <SecondColumnWrapper>
       <Title>{name}</Title>
-      <Rating />
+      <Rating rating={32} size={RatingVariant.small} />
       <AddressLine>{address}</AddressLine>
     </SecondColumnWrapper>
     <ThirdColumnWrapper>

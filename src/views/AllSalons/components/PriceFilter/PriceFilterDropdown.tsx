@@ -1,8 +1,7 @@
 import React from "react";
 import Select from "react-select";
-import styled from "styled-components";
-import downArrow from "../../../svg/down-arrow.svg";
-import { DropdownConfig, PriceIntervalSelected } from "../../../types";
+import { DropdownConfig, PriceIntervalSelected } from "../../../../types";
+import { DropDownShevron } from "./DropDownShevron";
 
 type DropdownChangeHandler = (a: PriceIntervalSelected) => void;
 
@@ -48,21 +47,9 @@ const styles = {
   }),
 };
 
-const DropdownShevron = styled.div`
-  width: 42px;
-  height: 35px;
-  padding-top: 14px;
-  text-align: center;
-  cursor: pointer;
-`;
-
 const components = {
   IndicatorSeparator: () => null,
-  DropdownIndicator: () => (
-    <DropdownShevron>
-      <img src={downArrow} alt="Pick a a price range" />
-    </DropdownShevron>
-  ),
+  DropdownIndicator: () => <DropDownShevron />,
 };
 
 export const PriceDropdown = ({

@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import arrowRight from "../../../svg/arrow-right.svg";
+import arrowRight from "../../../assets/arrow-right.svg";
 
 const StyledLink = styled(Link)`
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 35px;
+  user-select: none;
 `;
 
 const StyledImg = styled.img`

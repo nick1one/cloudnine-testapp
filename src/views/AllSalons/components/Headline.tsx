@@ -3,6 +3,10 @@ import React from "react";
 import { BackButton } from "./BackButton";
 import { FilterButton } from "./FilterButton";
 
+interface HeadlineProps {
+  title: string;
+}
+
 const CentralTitle = styled.h1`
   margin: 8px 0 10px 0;
   font-family: "MillerBanner", serif;
@@ -24,10 +28,10 @@ const StyledHeadline = styled.div`
   padding: 0 15px;
 `;
 
-export const Headline = () => (
+export const Headline = ({ title }: HeadlineProps) => (
   <StyledHeadline>
     <BackButton />
-    <CentralTitle>Hår</CentralTitle>
+    <CentralTitle>{title}</CentralTitle>
     <FilterButton />
   </StyledHeadline>
 );

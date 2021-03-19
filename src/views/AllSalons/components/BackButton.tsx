@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { ArrowLeft } from "../../../components/Icons";
 import SquaredButton from "../../../components/SquareButton";
-import backIcon from "../../../svg/arrow-left.svg";
 
 const StyledButton = styled(SquaredButton)`
   text-align: left;
@@ -14,6 +14,6 @@ export const BackButton = () => (
       console.log("Back button clicked...");
     }}
   >
-    <img src={backIcon} alt="Back" />
+    <ArrowLeft />
   </StyledButton>
 );

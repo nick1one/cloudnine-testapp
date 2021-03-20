@@ -1,4 +1,4 @@
-import { Tabs } from "../../../components/Tabs";
+import { Tabs } from "./Tabs";
 import { useDispatch, useStore } from "../../../store";
 import { ActionNames, AppState } from "../../../types";
 

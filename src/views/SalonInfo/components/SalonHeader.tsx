@@ -22,7 +22,8 @@ const Banner = styled.div`
   height: 251px;
   margin-top: -20px;
   padding: 25px 10px 0 10px;
-  background-image: url(${img});
+  background-image: linear-gradient(to bottom, transparent 50%, #000),
+    url(${img});
   box-sizing: border-box;
   align-content: flex-start;
 `;

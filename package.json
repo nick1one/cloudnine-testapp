@@ -56,7 +56,11 @@
     "@types/react-dom": "^17.0.2",
     "@types/react-router-dom": "^5.1.7",
     "@types/react-select": "^4.0.13",
-    "@types/styled-components": "^5.1.8"
+    "@types/styled-components": "^5.1.8",
+    "stylelint": "^13.12.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-order": "^4.1.0"
   },
   "husky": {
     "hooks": {

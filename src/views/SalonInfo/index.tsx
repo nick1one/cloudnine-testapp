@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import { Tabs } from "../../components/Tabs";
 import { ContentLine } from "./components/ContentLine";
 import { FormattedParagraph } from "./components/FormattedParagraph";
 import { Clock, DownArrow, Globe, Phone, Pin } from "../../components/Icons";

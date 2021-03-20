@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
@@ -39,11 +39,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "npm run build && serve -s build",
+    "serve": "PUBLIC_URL=/ && npm run build && serve -s build",
     "prettify": "./node_modules/.bin/prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "stylelint": "npx stylelint \"**/*.{tsx,css}\"",
-    "predeploy": "npm run build",
+    "predeploy": "PUBLIC_URL=https://nick1one.github.io/cloudnine-testapp && npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

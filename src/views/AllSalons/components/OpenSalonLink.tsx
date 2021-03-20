@@ -5,9 +5,9 @@ import arrowRight from "../../../assets/arrow-right.svg";
 
 const StyledLink = styled(Link)`
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
   width: 35px;
+  align-items: center;
+  justify-content: flex-end;
   user-select: none;
 `;
 

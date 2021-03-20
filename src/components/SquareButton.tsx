@@ -3,13 +3,15 @@ import styled from "styled-components";
 const buttonSize = 20;
 
 const SquaredButton = styled.button`
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-  background: none;
-  outline: none;
-  height: ${buttonSize}px;
+  /* stylelint-disable */
   width: ${buttonSize}px;
+  height: ${buttonSize}px;
+  /* stylelint-enable */
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  outline: none;
   user-select: none;
 `;
 

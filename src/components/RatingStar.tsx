@@ -1,24 +1,33 @@
 import React from "react";
 import styled from "styled-components";
-import starFilled from "../assets/star-filled.svg";
-import starOutlined from "../assets/star-outlined.svg";
 import { RatingVariant } from "../types";
+import { StarFilled, StarOutlined } from "./Icons";
 
 interface RatingStarProps {
   filled: boolean;
   size: RatingVariant;
 }
 
-const StyledImg = styled("img")<{ size: RatingVariant }>`
-  margin-right: ${({ size }: { size: RatingVariant }) =>
-    size === RatingVariant.small ? "3px" : "5px"};
+const getGapSize = (size: RatingVariant): string =>
+  size === RatingVariant.small ? "3px" : "5px";
+
+const getWidth = (size: RatingVariant): string =>
+  size === RatingVariant.large ? "12px" : "";
+
+const StarWrapper = styled("b")<{
+  size: RatingVariant;
+}>`
+  /* stylelint-disable */
+  margin-right: ${({ size }: { size: RatingVariant }) => getGapSize(size)};
+  /* stylelint-enable */
 `;
 
 export const RatingStar = ({ filled, size }: RatingStarProps) => (
-  <StyledImg
-    size={size}
-    width={size === RatingVariant.large ? "12px" : ""}
-    src={filled ? starFilled : starOutlined}
-    alt=""
-  />
+  <StarWrapper size={size}>
+    {filled ? (
+      <StarFilled size={size} width={getWidth(size)} />
+    ) : (
+      <StarOutlined size={size} width={getWidth(size)} />
+    )}
+  </StarWrapper>
 );

@@ -9,12 +9,12 @@ interface RatingProps {
 }
 
 const RatingNumber = styled("span")<RatingProps>`
-  font-family: "HelveticaNeue", sans-serif;
-  font-weight: 300;
-  font-size: 11px;
-  color: #656565;
   margin-left: 6px;
-
+  color: #656565;
+  font-family: "HelveticaNeue", sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  /* stylelint-disable */
   ${({ size }: RatingProps) =>
     size === RatingVariant.large &&
     `
@@ -23,7 +23,7 @@ const RatingNumber = styled("span")<RatingProps>`
     margin-left: 5px;
     line-height: 17px;
     vertical-align: top;
-  `}
+  `}/* stylelint-enable */
 `;
 
 const StarsWrapper = styled.span`
@@ -32,8 +32,10 @@ const StarsWrapper = styled.span`
 `;
 
 const RatingWrapper = styled("span")<RatingProps>`
+  /* stylelint-disable */
   margin-top: ${({ size }: RatingProps) =>
-    size === RatingVariant.small ? "8px" : "2px"}; ;
+    size === RatingVariant.small ? "8px" : "2px"};
+  /* stylelint-enable */
 `;
 
 export const Rating = (props: RatingProps) => (

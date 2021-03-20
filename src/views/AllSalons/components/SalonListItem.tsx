@@ -8,16 +8,16 @@ import { OpenSalonLink } from "./OpenSalonLink";
 const StyledLi = styled.li`
   display: flex;
   justify-content: space-between;
-  border-bottom: solid 1px #eeeeee;
   padding-top: 15px;
+  border-bottom: solid 1px #eee;
 `;
 
 const FirstColumn = styled.p`
   margin-top: 5px;
+  color: #202020;
   font-family: "HelveticaNeue", sans-serif;
   font-size: 15px;
   text-align: left;
-  color: #202020;
 `;
 const SecondColumnWrapper = styled.div`
   display: flex;
@@ -33,32 +33,32 @@ const ThirdColumnWrapper = styled.div`
 
 const Title = styled.h2`
   margin: 2px 0 0 0;
+  color: #202020;
   font-family: "MillerBanner", serif;
   font-size: 20px;
   font-weight: 300;
-  color: #202020;
 `;
 
 const AddressLine = styled.p`
+  margin-top: 9px;
+  color: #666;
   font-family: "HelveticaNeue", sans-serif;
   font-size: 15px;
   letter-spacing: -0.2px;
-  color: #666666;
-  margin-top: 9px;
 `;
 
 const Price = styled.p`
-  font-family: "HelveticaNeue", sans-serif;
-  font-size: 15px;
-  color: #202020;
   margin-top: 6px;
   margin-bottom: 13px;
+  color: #202020;
+  font-family: "HelveticaNeue", sans-serif;
+  font-size: 15px;
 `;
 const TimeToDrive = styled.p`
+  margin-top: 0;
+  color: #666;
   font-family: "HelveticaNeue", sans-serif;
   font-size: 13px;
-  color: #666666;
-  margin-top: 0;
 `;
 
 const salonId = nanoid();

@@ -4,8 +4,8 @@ import { ArrowLeft } from "../../../components/Icons";
 import SquaredButton from "../../../components/SquareButton";
 
 const StyledButton = styled(SquaredButton)`
-  text-align: left;
   padding-top: 1px;
+  text-align: left;
 `;
 
 export const BackButton = () => (

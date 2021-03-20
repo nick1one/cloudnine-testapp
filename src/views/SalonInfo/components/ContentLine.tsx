@@ -9,10 +9,10 @@ interface ContentLineProps {
 }
 
 const StyledParagraph = styled(FormattedParagraph)`
-  margin: 0;
   padding-top: 13px;
   padding-bottom: 16px;
-  border-bottom: solid 0.5px #eeeeee;
+  border-bottom: solid 0.5px #eee;
+  margin: 0;
 `;
 
 export const ContentLine = ({ children, icon }: ContentLineProps) => {

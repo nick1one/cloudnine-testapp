@@ -8,14 +8,14 @@ import { SalonHeader } from "./components/SalonHeader";
 import { TabsContainer } from "./components/TabsContainter";
 
 const SalonInfoWrapper = styled.div`
-  border-top: solid 20px #f9f9f9;
   padding: 0 15px;
+  border-top: solid 20px #f9f9f9;
 `;
 
 const SalonDescription = styled(FormattedParagraph)`
-  line-height: 1.47;
-  color: #2b2b2b;
   margin-top: 20px;
+  color: #2b2b2b;
+  line-height: 1.47;
 `;
 
 const StyledDownArrow = styled(DownArrow)`

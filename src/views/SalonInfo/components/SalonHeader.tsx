@@ -9,7 +9,7 @@ import { FavoriteButton } from "./FavoriteButton";
 const StyleTitle = styled.h1`
   flex: 1 100%;
   margin: 115px 5px 5px 5px;
-  color: #ffffff;
+  color: #fff;
   font-family: "MillerBanner", serif;
   font-size: 22px;
   font-weight: 300;
@@ -17,15 +17,15 @@ const StyleTitle = styled.h1`
 
 const Banner = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   height: 251px;
-  margin-top: -20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
   padding: 25px 10px 0 10px;
+  margin-top: -20px;
   background-image: linear-gradient(to bottom, transparent 50%, #000),
     url(${img});
-  box-sizing: border-box;
-  align-content: flex-start;
 `;
 
 const StyledRating = styled(Rating)`

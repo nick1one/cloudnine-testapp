@@ -10,9 +10,9 @@ const IconSpacer = styled.span`
 `;
 
 const IconWrapper = styled.span`
+  position: absolute;
   width: 15px;
   height: 15px;
-  position: absolute;
   padding-top: 1px;
   user-select: none;
 `;

@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { SingleTab } from "./Tab";
 
 const StyledWrapper = styled.ul`
-  margin: 0;
-  padding: 0;
   display: flex;
+  padding: 0;
+  margin: 0;
 `;
 
 interface TabsProps {

@@ -10,18 +10,18 @@ interface SalonsListProps {
 }
 
 const StyledUl = styled.ul`
-  margin: 0;
-  padding: 0 15px;
-  max-height: 552px;
   overflow: scroll;
+  max-height: 552px;
+  padding: 0 15px;
+  margin: 0;
 `;
 
 const EmptyListMessage = styled.p`
-  font-family: "HelveticaNeue-Light", sans-serif;
-  text-align: center;
   margin: 50px 35px;
-  color: #666666;
+  color: #666;
+  font-family: "HelveticaNeue-Light", sans-serif;
   font-size: 15px;
+  text-align: center;
 `;
 
 export const SalonsList = ({ salons }: SalonsListProps) =>

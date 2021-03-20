@@ -4,9 +4,9 @@ import styled from "styled-components";
 import { WhiteArrowLeft } from "../../../components/Icons";
 
 const StyledLink = styled(Link)`
+  display: flex;
   width: 40px;
   height: 40px;
-  display: flex;
   align-items: center;
   user-select: none;
 `;

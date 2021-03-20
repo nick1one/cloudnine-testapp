@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { WhiteArrowLeft } from "../../../components/Icons";
@@ -11,7 +11,7 @@ const StyledLink = styled(Link)`
   user-select: none;
 `;
 
-export const BackButton = () => (
+export const BackButton = (): ReactElement => (
   <StyledLink to={`/`}>
     <WhiteArrowLeft />
   </StyledLink>

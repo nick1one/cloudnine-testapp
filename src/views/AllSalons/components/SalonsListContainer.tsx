@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { useStore } from "../../../store";
 import { AppState, DropdownConfig, SalonItemData } from "../../../types";
 import { SalonsList } from "./SalonsList";
@@ -13,14 +13,12 @@ const filterByPrice = (
   selectedInterval: DropdownConfig
 ): SalonItemData[] => {
   const [minPrice, maxPrice] = getMinMax(selectedInterval);
-  return salonList.filter(
-    ({ price }: SalonItemData): Boolean => {
-      return price >= minPrice && price <= maxPrice;
-    }
-  );
+  return salonList.filter(({ price }: SalonItemData): boolean => {
+    return price >= minPrice && price <= maxPrice;
+  });
 };
 
-export const SalonsListContainer = () => {
+export const SalonsListContainer = (): ReactElement => {
   const { selectedInterval, salonList }: AppState = useStore();
 
   const outputList = selectedInterval

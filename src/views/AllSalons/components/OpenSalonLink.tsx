@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import arrowRight from "../../../assets/arrow-right.svg";
@@ -15,7 +15,11 @@ const StyledImg = styled.img`
   margin-bottom: 11px;
 `;
 
-export const OpenSalonLink = ({ salonId }: { salonId: string }) => (
+export const OpenSalonLink = ({
+  salonId,
+}: {
+  salonId: string;
+}): ReactElement => (
   <StyledLink to={`/salon-info/${salonId}`}>
     <StyledImg src={arrowRight} alt="" />
   </StyledLink>

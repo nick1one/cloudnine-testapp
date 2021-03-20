@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import Select from "react-select";
 import { DropdownConfig, PriceIntervalSelected } from "../../../../types";
 import { DropDownShevron } from "./DropDownShevron";
@@ -19,7 +19,7 @@ const DropdownTextStyle = {
 };
 
 const styles = {
-  control: (provided: any, state: any) => ({
+  control: (provided: any) => ({
     ...provided,
     cursor: "pointer",
     boxShadow: "none",
@@ -56,7 +56,7 @@ export const PriceDropdown = ({
   options,
   defaultValue,
   onChange,
-}: PriceDropdownProps) => {
+}: PriceDropdownProps): ReactElement => {
   const dropDownProps = {
     options,
     ...(!!defaultValue && { defaultValue }),

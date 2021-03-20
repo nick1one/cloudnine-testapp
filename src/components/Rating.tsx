@@ -1,5 +1,6 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
+import { getRandomInt } from "../helpers";
 import { RatingVariant } from "../types";
 import { RatingStar } from "./RatingStar";
 
@@ -38,13 +39,16 @@ const RatingWrapper = styled("span")<RatingProps>`
   /* stylelint-enable */
 `;
 
-export const Rating = (props: RatingProps) => (
-  <RatingWrapper {...props}>
-    <StarsWrapper>
-      {[...Array(5)].map((e, i) => (
-        <RatingStar size={props.size} filled={i < 3} key={i} />
-      ))}
-    </StarsWrapper>
-    <RatingNumber {...props}>({props.rating})</RatingNumber>
-  </RatingWrapper>
-);
+export const Rating = (props: RatingProps): ReactElement => {
+  const rating = getRandomInt(5);
+  return (
+    <RatingWrapper {...props}>
+      <StarsWrapper>
+        {[...Array(5)].map((e, i) => (
+          <RatingStar size={props.size} filled={i < rating} key={i} />
+        ))}
+      </StarsWrapper>
+      <RatingNumber {...props}>({props.rating})</RatingNumber>
+    </RatingWrapper>
+  );
+};

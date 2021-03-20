@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React from "react";
+import React, { ReactElement } from "react";
 import { BackButton } from "./BackButton";
 import { FilterButton } from "./FilterButton";
 
@@ -28,7 +28,7 @@ const StyledHeadline = styled.div`
   border-bottom: 1px solid #b69f58;
 `;
 
-export const Headline = ({ title }: HeadlineProps) => (
+export const Headline = ({ title }: HeadlineProps): ReactElement => (
   <StyledHeadline>
     <BackButton />
     <CentralTitle>{title}</CentralTitle>

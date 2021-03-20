@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 import { Rating } from "../../../components/Rating";
 import { RatingVariant, SalonItemData } from "../../../types";
@@ -63,7 +63,11 @@ const TimeToDrive = styled.p`
 
 const salonId = nanoid();
 
-export const SalonListItem = ({ name, address, price }: SalonItemData) => (
+export const SalonListItem = ({
+  name,
+  address,
+  price,
+}: SalonItemData): ReactElement => (
   <StyledLi key={salonId}>
     <FirstColumn>12.00</FirstColumn>
     <SecondColumnWrapper>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 import img from "../../../assets/image.jpg";
 import { Rating } from "../../../components/Rating";
@@ -34,7 +34,7 @@ const StyledRating = styled(Rating)`
   }
 `;
 
-export const SalonHeader = () => (
+export const SalonHeader = (): ReactElement => (
   <Banner>
     <BackButton />
     <FavoriteButton />

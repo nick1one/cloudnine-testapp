@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { PRICE_FILTER_CONFIG } from "../../../../constants";
 import { useDispatch, useStore } from "../../../../store";
 import {
@@ -8,7 +8,7 @@ import {
 } from "../../../../types";
 import { PriceDropdown } from "./PriceFilterDropdown";
 
-export const PriceDropdownContainer = () => {
+export const PriceDropdownContainer = (): ReactElement => {
   const { selectedInterval: defaultValue }: AppState = useStore();
   const dispatch = useDispatch();
 

@@ -1,4 +1,11 @@
-import React, { Context, createContext, useContext, useReducer } from "react";
+import React, {
+  Context,
+  createContext,
+  Dispatch,
+  ReactElement,
+  useContext,
+  useReducer,
+} from "react";
 import {
   PRICE_FILTER_CONFIG,
   PRICE_FILTER_SELECTED_NUM,
@@ -29,8 +36,10 @@ function reducer(
       return { ...state };
   }
 }
-
-export const StoreProvider = (props: any) => {
+interface StoreProviderType {
+  children: React.ReactNode;
+}
+export const StoreProvider = (props: StoreProviderType): ReactElement => {
   const [state, dispatch] = useReducer(reducer, defaultState);
 
   DispatchContext = createContext(dispatch);
@@ -44,6 +53,6 @@ export const StoreProvider = (props: any) => {
     </DispatchContext.Provider>
   );
 };
-
-export const useDispatch = () => useContext(DispatchContext);
-export const useStore = () => useContext(StoreContext);
+export const useDispatch = (): Dispatch<ActionType> =>
+  useContext(DispatchContext);
+export const useStore = (): AppState => useContext(StoreContext);

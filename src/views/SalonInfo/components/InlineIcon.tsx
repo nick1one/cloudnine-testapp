@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 
 interface InlineIconProps {
@@ -17,7 +17,7 @@ const IconWrapper = styled.span`
   user-select: none;
 `;
 
-export const InlineIcon = ({ icon }: InlineIconProps) => (
+export const InlineIcon = ({ icon }: InlineIconProps): ReactElement => (
   <>
     <IconWrapper>{icon}</IconWrapper>
     <IconSpacer />

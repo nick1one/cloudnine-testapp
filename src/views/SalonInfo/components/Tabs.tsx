@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 import { SingleTab } from "./Tab";
 
@@ -14,7 +14,11 @@ interface TabsProps {
   onClick: (i: number) => void;
 }
 
-export const Tabs = ({ titles, activeTab, onClick }: TabsProps) => {
+export const Tabs = ({
+  titles,
+  activeTab,
+  onClick,
+}: TabsProps): ReactElement => {
   return (
     <StyledWrapper>
       {titles.map((tabName, i) => (

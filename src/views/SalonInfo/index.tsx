@@ -1,9 +1,9 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import { Clock, DownArrow, Globe, Phone, Pin } from "../../components/Icons";
 import { ContentLine } from "./components/ContentLine";
 import { FormattedParagraph } from "./components/FormattedParagraph";
-import { Clock, DownArrow, Globe, Phone, Pin } from "../../components/Icons";
 import { SalonHeader } from "./components/SalonHeader";
 import { TabsContainer } from "./components/TabsContainter";
 
@@ -24,8 +24,8 @@ const StyledDownArrow = styled(DownArrow)`
   user-select: none;
 `;
 
-function SalonInfo() {
-  let { id }: { id: string } = useParams();
+function SalonInfo(): ReactElement {
+  const { id }: { id: string } = useParams();
   console.log(`Salon ${id} info`);
 
   return (

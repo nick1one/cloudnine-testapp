@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 import { DownArrow } from "../../../../components/Icons";
 
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   user-select: none;
 `;
 
-export const DropDownShevron = () => (
+export const DropDownShevron = (): ReactElement => (
   <Wrapper>
     <DownArrow />
   </Wrapper>

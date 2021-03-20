@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 import { EMPTY_LIST_MESSAGE } from "../../../constants";
 import { SalonItemData } from "../../../types";
@@ -24,7 +24,7 @@ const EmptyListMessage = styled.p`
   text-align: center;
 `;
 
-export const SalonsList = ({ salons }: SalonsListProps) =>
+export const SalonsList = ({ salons }: SalonsListProps): ReactElement =>
   salons.length ? (
     <StyledUl>
       {salons.map((salon: SalonItemData) => (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 import { FormattedParagraph } from "./FormattedParagraph";
 import { InlineIcon } from "./InlineIcon";
@@ -15,7 +15,10 @@ const StyledParagraph = styled(FormattedParagraph)`
   margin: 0;
 `;
 
-export const ContentLine = ({ children, icon }: ContentLineProps) => {
+export const ContentLine = ({
+  children,
+  icon,
+}: ContentLineProps): ReactElement => {
   return (
     <StyledParagraph>
       {icon && <InlineIcon icon={icon} />}

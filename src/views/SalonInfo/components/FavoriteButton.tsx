@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 import { Heart } from "../../../components/Icons";
 import SquareButton from "../../../components/SquareButton";
@@ -11,7 +11,7 @@ const StyledButton = styled(SquareButton)`
   justify-content: flex-end;
 `;
 
-export const FavoriteButton = () => (
+export const FavoriteButton = (): ReactElement => (
   <StyledButton
     onClick={() => {
       console.log("Add to favorite button was pushed");

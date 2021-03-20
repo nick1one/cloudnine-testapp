@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 import { RatingVariant } from "../types";
 import { StarFilled, StarOutlined } from "./Icons";
@@ -22,7 +22,7 @@ const StarWrapper = styled("b")<{
   /* stylelint-enable */
 `;
 
-export const RatingStar = ({ filled, size }: RatingStarProps) => (
+export const RatingStar = ({ filled, size }: RatingStarProps): ReactElement => (
   <StarWrapper size={size}>
     {filled ? (
       <StarFilled size={size} width={getWidth(size)} />

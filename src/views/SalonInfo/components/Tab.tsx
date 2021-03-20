@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 
 const StyledTab = styled.li`
@@ -37,7 +37,11 @@ interface SingleTabProps {
   onClick: () => void;
 }
 
-export const SingleTab = ({ active, onClick, children }: SingleTabProps) =>
+export const SingleTab = ({
+  active,
+  onClick,
+  children,
+}: SingleTabProps): ReactElement =>
   active ? (
     <ActiveTab onClick={onClick}>{children}</ActiveTab>
   ) : (
